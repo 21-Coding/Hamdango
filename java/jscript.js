@@ -72,6 +72,8 @@ $(document).ready(function(event) {
 
     $(".deleteButton").click(function() {
     $(`.${newTaskName}`).hide()
+
+    newTaskName.clear()
     console.log(`${newTaskName}`)
   })
 
