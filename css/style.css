@@ -1,3 +1,7 @@
 #story {
   display: none;
 }
+#showlist {
+  display: none;
+  color: red;
+}

@@ -1,21 +1,44 @@
+// Business Logic
+function Task(taskName, date, priorityLevel, location) {
+  this.taskName = taskName;
+  this.date = date;
+  this.priorityLevel = priorityLevel;
+  this.location = location;
+}
+
+
+
+
+
+
+
+
+//User Interface Logic
+
+Task.prototype.display = function () {
+  console.log(this.name)
+$("#return-task-name").text(this.taskName);
+$("#return-task-date").text(this.date);
+$("#return-task-priority").text(this.priorityLevel);
+$("#return-task-location").text(this.location);
+
+}
+
 $(document).ready(function(event) {
   $("#formOne").submit(function(event) {
-    var person1Input = $("input#person1").val();
-    var person2Input = $("input#person2").val();
-    var animalInput= $("input#animal").val();
-    var exclamationInput = $("input#exclamation").val();
-    var verbInput = $("input#verb").val();
-    var nounInput = $("input#noun").val();
+    event.preventDefault();
+    var newTaskName = $("input#task-name").val();
+    var newTaskDate = $("input#task-date").val();
+    var newTaskPriorityLevel = $("#priorityLevel").val();
+    var newTaskLocation = $("input#task-location").val();
 
-    $(".person1").text(person1Input);
-    $(".person2").text(person2Input);
-    $(".animal").text(animalInput);
-    $(".exclamation").text(exclamationInput);
-    $(".verb").text(verbInput);
-    $(".noun").text(nounInput);
+
+    var task1 = new Task(newTaskName, newTaskDate, newTaskPriorityLevel, newTaskLocation)
+    console.log(task1)
 
     $("#story").show();
+    task1.display();
 
-    event.preventDefault();
+
   });
 });
