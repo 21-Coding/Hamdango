@@ -57,21 +57,27 @@ $(document).ready(function(event) {
     var newTaskPriorityLevel = $("#priorityLevel").val();
     var newTaskLocation = $("input#task-location").val();
 
-    $("ul").append(
-      `<bold><li>Task Name: ${newTaskName}</li></bold>
+    $("#listed-tasks").append(
+      `<div class="${newTaskName}">
+      <ul>
+      <bold><li>Task Name: ${newTaskName}</li></bold>
       <li>Task Date: ${newTaskDate}</li>
       <li>Task Priority: ${newTaskPriorityLevel}</li>
-      <li> Task Location: ${newTaskLocation}<button type="button" name="delete-button">Task Completed!</button>`
+      <li>Task Location: ${newTaskLocation}</li>
+      </ul>
+      <button class="deleteButton">Task Completed!</button>
+      </div>`
     )
-    var task1 = new Task(newTaskName, newTaskDate, newTaskPriorityLevel, newTaskLocation)
-    console.log(task1)
-//
     $("#story").show();
-//     toDoList.addTask(task1)
-// console.log(toDoList.tasks)
 
-  });
+    $(".deleteButton").click(function() {
+    $(`.${newTaskName}`).hide()
+    console.log(`${newTaskName}`)
+  })
+
+  })
 });
+
 
 // // $("#dates").on("click", ".deleteButton", function() {
 //     dates.deleteContact(this.id);
