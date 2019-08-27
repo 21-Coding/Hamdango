@@ -60,10 +60,10 @@ $(document).ready(function(event) {
     $("#listed-tasks").append(
       `<div class="${newTaskName}">
       <ul>
-      <bold><li>Task Name: ${newTaskName}</li></bold>
-      <li>Task Date: ${newTaskDate}</li>
-      <li>Task Priority: ${newTaskPriorityLevel}</li>
-      <li>Task Location: ${newTaskLocation}</li>
+      <bold><li>Film Title: ${newTaskName}</li></bold>
+      <li>Date: ${newTaskDate}</li>
+      <li>Price: ${newTaskPriorityLevel}</li>
+      <li>Cost: ${newTaskLocation}</li>
       </ul>
       <button class="deleteButton">Task Completed!</button>
       </div>`

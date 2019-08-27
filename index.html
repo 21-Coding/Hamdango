@@ -5,50 +5,56 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="java/jquery-1.12.4.js"></script>
     <script src="java/jscript.js"></script>
-    <title>To-Do-List</title>
+    <title>Hamdango</title>
   </head>
   <body>
-    <div class="container">
-      <h1>What do you have planned today?</h1>
-      <div>
+    <h1><center>Welcome To Hamdango</center></h1>
+    <div class="jumbotron">
+      <br>
+            <div>
         <form id="formOne">
           <div class="form-group">
-            <label for="task-name">Task Name</label>
+            <label for="task-name">Film Title</label>
             <input id="task-name" class="form-control" type="text">
           </div>
 
           <div class="form-group">
             <label for="task-date"> Date:</label>
             <input id="task-date" class="form-control" type="date">
-                    <!-- <button type="submit" class='btn'><i class="far fa-calendar-plus"></i>Book!</button>
-                    <img class="img"src="" alt="">
-                  </form> -->
-          </div>
 
+          </div>
           <div class= "form-group">
-            <label for="priorityLevel">Priority:</label>
+            <label for="priorityLevel">Time:</label>
             <select id="priorityLevel">
-              <option value="Yellow">Yellow</option>
-              <option value="Blue">Blue</option>
-              <option value="Red">Red</option>
+              <option value="AM">Morning</option>
+              <option value="Noon">Afternoon</option>
+              <option value="Eve">Evening</option>
+            </select>
+<br>
+          <div class= "form-group">
+            <label for="priorityLevel">Price:</label>
+            <select id="priorityLevel">
+              <option value="Minor">Minor</option>
+              <option value="Adult">Adult</option>
+              <option value="Senior">Senior</option>
             </select>
           </div>
 <br>
 
           <div class="form-group">
-            <label for="task-location">Location</label>
+            <label for="task-location">Cost:</label>
             <input id="task-location" class="form-control" type="text">
           </div>
         </div>
 
-        <button type="submit" class="btn-success btn">Add Task:</button>
+        <button type="submit" class="btn-danger btn">Go!</button>
 
         </form>
       </div>
 
       <div id="story">
-        <h1>A look at the day..</h1>
-        <p>Hello! Today seems pretty busy! These are your tasks for the day:
+        <h1>Here at Hamdango we value our veterans, seniors, and students! Coupon avaiable here!</h1>
+        <p>Here is your itinerary:
         </p>
         <div id="listed-tasks">
         </div>
@@ -57,5 +63,6 @@
       </div>
         </div>
       </div>
+        <center><img class="center" src="https://earlymoments.com/upload/EarlyMoments/BRP/green-egg-art.jpg" alt="Smiley face"></center>
   </body>
 </html>
